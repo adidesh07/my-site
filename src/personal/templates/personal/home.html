@@ -3,12 +3,11 @@
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Django Project Site</h1>
-  <p class="lead">Hi! I have created this blog site as part of a project while learning Django and basics of HTML, CSS and JavaScrpit. This project has helped me in learning to create web applications from scratch.
-In this web app, the user can log in and create blogs. Visitors can view and comment on the blogs published by the user. The user can approve comments by visitors or delete them. User can also edit or delete blogs after logging in.</p>
+  <p class="lead">Hi! I have created this blog site as part of a project while learning Django and basics of HTML, CSS. This project utilises concepts like CRUD functionality and user registration.</p>
 </div>
 
 <div class="container">
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column" style="text-align: center;">
       <h1>Registered Users:</h1>
         {% for account in accounts %}
             <p>{{account}}</p>
