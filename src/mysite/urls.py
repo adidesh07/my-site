@@ -22,7 +22,8 @@ from personal.views import (home_screen_view)
 from account.views import (registration_view,
                            logout_view,
                            login_view,
-                           account_view)
+                           account_view,
+                           must_authenticate)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,7 +33,7 @@ urlpatterns = [
     path('logout/', logout_view, name='logout'),
     path('login/', login_view, name='login'),
     path('account/', account_view, name='account'),
-
+    path('must_authenticate/', must_authenticate, name='must_authenticate'),
 
     # Password reset links (ref: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
     path('password_change/done/',
