@@ -12,7 +12,7 @@ User can login or create a new account. Whenever new account is created, account
 ## Login Screen:
 ![](Images/Login.png)
 
-The 'forgot password' password feature allows user to enter their registered email id and get a link to create a new password for that account.
+The 'forgot password' feature allows user to enter their registered email id and get a link to create a new password for that account.
 
 ## Sign-Up Screen:
 ![](Images/Register.png)
