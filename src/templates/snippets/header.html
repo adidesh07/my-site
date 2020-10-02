@@ -27,6 +27,7 @@ html{
 
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   <h3 class="my-0 mr-md-auto font-weight-normal">
+      <img src="https://www.flaticon.com/svg/static/icons/svg/2885/2885645.svg" style="margin-right: 10px;" alt="" width="70" height="70">
       {% if request.user.is_authenticated %}
         Hello, {{request.user.username}}
       {% else %}
