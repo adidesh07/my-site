@@ -1,9 +1,10 @@
 # my-site
 ###### (Project currently on-going)
  A Django based site created to for learning backend and frontend basics.
- This project makes use of user registration and authentication concepts.
+ This project makes use of user registration and authentication concepts as well as CRUD functionality.
  
- User can register, or login if already registered. After logging in user can also change their account details and password.
+ User can register, or login if already registered. After logging in, user can also change their account details and password.
+ Posts can be created with images and descriptions.
 ## Home Screen:
 ![](Images/Home.png)
 
