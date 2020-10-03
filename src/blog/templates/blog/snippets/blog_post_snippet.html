@@ -5,6 +5,7 @@
 	}
 	.card-body{
 		padding: 20px;
+		width: 100%;
 	}
 </style>
 
@@ -14,7 +15,7 @@
 		<!-- Blog Post -->
 		<div class="card m-auto">
 			<a href="{% url 'blog:detail' post.slug %}">
-				<img class="card-img-top" src="{{blog_post.image.url}}">
+				<img class="card-img-top" style="max-height: 400px;" src="{{blog_post.image.url}}">
 			</a>
 			<div class="card-body mt-2 mb-2">
 				<a href="{% url 'blog:detail' post.slug %}">

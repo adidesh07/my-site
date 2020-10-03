@@ -20,6 +20,10 @@ html{
 .card-deck .card {
   min-width: 220px;
 }
+.search-bar{
+  max-width: 500px;
+  width: 100%;
+}
 </style>
 
 
@@ -34,6 +38,13 @@ html{
         Welcome to my site!
       {% endif %}
   </h3>
+
+  <div class="search-bar mt-sm-e mr-2" style="margin-top: 10px; margin-bottom: 10px;">
+    <form method="get">
+      <input type="text" class="form-control" name="q" id="id_q" placeholder="Search...">
+    </form>
+  </div>
+
   <nav class="my-2 my-md-0 mr-md-3">
     {% if request.user.is_authenticated %}
     <h5 class="my-0 mr-md-auto font-weight-normal">
@@ -51,3 +62,6 @@ html{
 
 <!--END HEADER-->
 
+<script type="text/javascript">
+  document.getElementById('id_q').value = '{{query}}'
+</script>
