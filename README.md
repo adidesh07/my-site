@@ -10,7 +10,6 @@
 
 User can login or create a new account. Whenever new account is created, account details are stored in the backend.
 
-
 A search bar is provided at the top which searches for posts according to keywords given to it.
 
 ## Login Screen:
