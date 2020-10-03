@@ -19,3 +19,10 @@ The 'forgot password' feature allows user to enter their registered email id and
 Password can also be changed after logging in and navigating to 'Accounts' page.
 ## Sign-Up Screen:
 ![](Images/Register.JPG)
+
+
+To run locally you must have Python3 and Django2.2.5 installed in your system. Download this repo and run the following command in your command prompt:
+
+python manage.py runserver
+
+After running, paste the IP address generated in your browser to open the site.
