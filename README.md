@@ -14,7 +14,7 @@ User can login or create a new account. Whenever new account is created, account
 A search bar is provided at the top which searches for posts according to keywords given to it.
 
 ## Login Screen:
-![](Images/Login.png)
+![](Images/Login1.png)
 
 The 'forgot password' feature allows user to enter their registered email id and get a link to create a new password for that account.
 
