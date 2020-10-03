@@ -23,6 +23,6 @@ Password can also be changed after logging in and navigating to 'Accounts' page.
 
 To run locally you must have Python3 and Django2.2.5 installed in your system. Download this repo and run the following command in your command prompt:
 
-python manage.py runserver
+  python manage.py runserver
 
 After running, paste the IP address generated in your browser to open the site.
