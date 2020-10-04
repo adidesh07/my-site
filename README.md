@@ -16,7 +16,7 @@ A search bar is provided at the top which searches for posts according to keywor
 ![](Images/Login.JPG)
 
 The 'forgot password' feature allows user to enter their registered email id and get a link to create a new password for that account.
-Password can also be changed after logging in and navigating to 'Accounts' page.
+Password can also be changed after logging in and navigating to 'Account' page.
 ## Sign-Up Screen:
 ![](Images/Register.JPG)
 
