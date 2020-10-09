@@ -8,12 +8,13 @@ REST APIs were implemented for the major functionalities like account registrati
 ## Home Screen:
 ![](Images/Home.png)
 
-User can login or create a new account. Whenever new account is created, account details are stored in the backend.
-
+The home screen displays the posts created by all the users registered on the site.
 A search bar is provided at the top which searches for posts according to keywords given to it.
 
 ## Login Screen:
 ![](Images/Login.JPG)
+
+User can login or create a new account. Whenever new account is created, account details are stored in the backend.
 
 The 'forgot password' feature allows user to enter their registered email id and get a link to create a new password for that account.
 Password can also be changed after logging in and navigating to 'Account' page.
@@ -31,4 +32,4 @@ Download this repo and run the following command in your command prompt:
 python manage.py runserver
 ```
 
-After running, paste the IP address generated in your browser to open the site.
+After running, paste the IP address generated, in your browser to open the site.
