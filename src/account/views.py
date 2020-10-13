@@ -70,13 +70,13 @@ def account_view(request):
         form = AccountUpdateForm(initial={'email': request.user.email,
                                           'username': request.user.username,})
     context['account_form'] = form
-
-    blog_posts = BlogPost.objects.filter(author=request.user)
-
-    context['blog_posts'] = blog_posts
-
     return render(request, 'account/account.html', context)
 
+def my_blogs_view(request):
+    context = {}
+    blog_posts = BlogPost.objects.filter(author=request.user)
+    context['blog_posts'] = blog_posts
+    return render(request, 'account/my_blogs.html', context=context)
 
 def must_authenticate(request):
     return render(request, 'account/must_authenticate.html', {})

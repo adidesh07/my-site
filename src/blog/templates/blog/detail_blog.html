@@ -18,21 +18,43 @@
         <!--Blog Post-->
 
         <div class="card m-auto">
+
             <img class="card-img-top" src="{{blog_post.image.url}}">
+            <br>
             <div class="card-body my-2">
+                <p>Updated on {{blog_post.date_updated}} by {{blog_post.author}}</p>
                 <h2 class="card-title">{{blog_post.title}}</h2>
-                <p class="card-text">{{blog_post.body|safe}}</p>
+                <p class="card-text">{{blog_post.body}}</p>
                 {% if blog_post.author == request.user %}
                     <a href="{% url 'blog:edit' blog_post.slug %}" class="btn btn-primary">Edit</a>
+                    <a href="{% url 'blog:delete' blog_post.slug %}" class="btn btn-danger">Delete</a>
                 {% endif %}
             </div>
-            <div class="card-footer text-muted">
-                    <p>Updated on {{blog_post.date_updated}} by {{blog_post.author}}</p>
+            <div class="container"><hr>
+                {% if user.is_authenticated %}
+                <form method="post">
+                    {% csrf_token %}
+                    <h4>Add Comment</h4>
+                    <textarea class="form-control" style="margin-bottom: 10px;" rows="2" type="text" name="text" id="id_body" placeholder="Add a comment on this post..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Post</button>
+                </form>
+                {% endif %}
+                <br>
+                {% if blog_post.comments.all %}
+                    <h3 style="text-align: center;">Comments:</h3>
+                    <div class="p-3" style="background: #E0E0E0;">
+                        {% for comments in blog_post.comments.all %}
+                            <p>Posted on: {{comments.date_published}}</p>
+                            <h4>{{comments.text}}</h4>
+                            <h6>Posted by: {{comments.author}}</h6>
+                            <hr>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
         </div>
 
         <!--End Blog Post-->
-
     </div>
 </div>
 

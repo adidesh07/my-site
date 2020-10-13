@@ -59,7 +59,7 @@ def api_delete_blog_view(request, slug):
 
     if request.method == 'DELETE':
         operation = blog_post.delete()
-        data={}
+        data = {}
         if operation:
             data['success'] = 'delete successfully'
         else:

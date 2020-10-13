@@ -34,3 +34,13 @@ def pre_save_blog_post_receiver(sender, instance, *args, **kwargs):
         instance.slug = slugify(instance.author.username + '-' + instance.title)
 
 pre_save.connect(pre_save_blog_post_receiver, sender=BlogPost)
+
+
+class BlogPostComment(models.Model):
+    post = models.ForeignKey(BlogPost, related_name='comments', on_delete=models.CASCADE)
+    author = models.CharField(max_length=100, blank=False, null=False)
+    text = models.TextField()
+    date_published = models.DateTimeField(auto_now_add=True, verbose_name='date published')
+
+    def __str__(self):
+        return self.text

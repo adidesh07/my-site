@@ -1,5 +1,5 @@
 from django import forms
-from .models import BlogPost
+from .models import BlogPost, BlogPostComment
 
 class CreateBlogPostForm(forms.ModelForm):
 
@@ -25,3 +25,10 @@ class UpdateBlogPostForm(forms.ModelForm):
         if commit:
             blog_post.save()
         return blog_post
+
+
+class BlogPostCommentForm(forms.ModelForm):
+
+    class Meta:
+        model = BlogPostComment
+        fields = ['text']

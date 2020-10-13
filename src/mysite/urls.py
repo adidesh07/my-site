@@ -32,7 +32,7 @@ urlpatterns = [
     path('register/', registration_view, name='register'),
     path('logout/', logout_view, name='logout'),
     path('login/', login_view, name='login'),
-    path('account/', account_view, name='account'),
+    path('account/', include('account.urls', 'account')),
     path('must_authenticate/', must_authenticate, name='must_authenticate'),
 
 

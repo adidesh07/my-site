@@ -39,11 +39,11 @@
 
 
 <!-- main content -->
-<div class="container" style="max-width: 1300px;">
+<div class="container p-3" style="max-width: 1400px;">
 	<div class="row">
 
 		<!-- blog feed -->
-		<div class="left-column col-lg-7" style="margin-left: 12px;">
+		<div class="left-column col-lg-6" style="margin-left: 12px;">
 
 			<!-- Top 'create post' bar -->
 			<div class="d-lg-none mb-3">
@@ -76,7 +76,6 @@
 
 		<!-- Right 'create post' column  -->
 		<div class="right-column col-lg-4 d-lg-flex d-none flex-column">
-
 			<div class="card create-post-bar d-flex flex-column p-3">
 				<div class="row">
 					<div class="column">
@@ -91,12 +90,25 @@
 				<a class="btn btn-lg btn-primary btn-block" href="{% url 'blog:create' %}">Create post</a>
 			</div>
 
+			<div class="card create-post-bar d-flex flex-column p-3">
+				<h3>Search</h3>
+				<p class="lead p-1">Search for any posts using keywords.</p>
+				<div class="search-bar mt-sm-e mr-2" style="margin-bottom: 10px;">
+					<form method="get">
+						<input type="text" class="form-control" name="q" id="id_q" placeholder="Search...">
+					</form>
+				</div>
+			</div>
 		</div>
+
 		<!-- end Right 'create post' column  -->
 
 
 	</div>
 </div>
 
+<script type="text/javascript">
+  document.getElementById('id_q').value = '{{query}}'
+</script>
 
 {% endblock content %}

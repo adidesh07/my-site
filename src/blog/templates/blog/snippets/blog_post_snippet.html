@@ -22,9 +22,7 @@
 					<h2 class="card-title">{{blog_post.title}}</h2>
 				</a>
 				<p class="card-text">{{blog_post.body|truncatechars:180}}</p>
-				{% if blog_post.author == request.user %}
-					<a href="{% url 'blog:edit' blog_post.slug %}" class="btn btn-primary">Update</a>
-				{% endif %}
+				<p><a href="{% url 'blog:detail' post.slug %}">{{blog_post.comments.all.count}} Comments</a></p>
 			</div>
 			<div class="card-footer text-muted">
 			  Updated on {{blog_post.date_updated}} by {{blog_post.author}}
