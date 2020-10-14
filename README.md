@@ -3,7 +3,9 @@
 A Django based site created to for learning backend and frontend basics.
 This project makes use of user registration and authentication concepts as well as CRUD functionality. User can register, or login if already registered. After logging in, user can also change their account details and password. Posts can be created with images and descriptions.
  
-REST APIs were implemented for the major functionalities like account registration, login, logout etc., and creating, editing or deleting posts. The APIs were created only to serve the purpose of learning their implementation. They are not being utilised on any other application.
+Posts can also have comments posted by other other users.
+ 
+REST APIs were implemented for the major functionalities like account registration, login, logout etc., and creating, editing or deleting posts. The APIs were created only to serve the purpose of learning their implementation. They are not being utilised on any application.
  
 ## Home Screen:
 ![](Images/Home.png)
