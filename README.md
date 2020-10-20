@@ -6,7 +6,7 @@ This project makes use of user registration and authentication concepts as well 
 REST APIs were implemented for the major functionalities like account registration, login, logout etc., and creating, editing or deleting posts. The APIs were created only to serve the purpose of learning their implementation. They are not being utilised on any other application.
  
 ## Home Screen:
-![](Images/Home.png)
+![](Images/blog-video.gif)
 
 The home screen displays the posts created by all the users registered on the site.
 A search bar is provided at the top which searches for posts according to keywords given to it.
